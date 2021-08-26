@@ -5,7 +5,7 @@
 </head>
 <body>
 
-
+<?php 
 <center>
 
  <label for="uname"><b>Username:</b></label>
@@ -14,7 +14,10 @@
  <input type="text" placeholder="Enter password" name="psw" required><br>
  
  <button> login </button>
+ 
+echo "prinitng php file";
 
+?>
 </center>
 </body>
 </html>

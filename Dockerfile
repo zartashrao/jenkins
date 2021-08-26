@@ -19,7 +19,7 @@ CMD service mysql start && service php7.4-fpm start && nginx -g 'daemon off;'
 RUN rm -rf /etc/nginx/sites-available/default
 COPY default /etc/nginx/sites-available/
 
-EXPOSE 40
+EXPOSE 44
 
 
 

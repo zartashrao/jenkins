@@ -28,10 +28,10 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
          key: ${{ secrets.SSH_PRIVATE_KEY_SERVER }}
-         known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+         known_hosts:  ssh-keyscan -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
          
       - name: Adding Known Hosts
-        run: ssh-keyscan -H '65.21.55.2' >> ~/.ssh/known_hosts
+        
 
     
       - name: Check Out Repo 

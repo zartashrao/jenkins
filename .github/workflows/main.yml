@@ -29,6 +29,9 @@ jobs:
         with:
          key: ${{ secrets.SSH_PRIVATE_KEY_SERVER }}
          known_hosts:  ssh-keyscan -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+         
+      - name: Deploy with rsync
+        run: rsync -av / ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/zartashrao/Desktop
     
       - name: Check Out Repo 
         uses: actions/checkout@v2
